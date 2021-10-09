@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notes_navigation"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.mynotes.View.feedFragment"
+        android:label="feedFragment" >
+        <action
+            android:id="@+id/action_feedFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_feedFragment_to_check_password"
+            app:destination="@id/check_password" />
+        <action
+
+            android:id="@+id/action_feedFragment_to_details_of_note"
+            app:destination="@id/details_of_note" >
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.mynotes.View.addFragment"
+        android:label="addFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings2"
+        android:name="com.example.mynotes.View.settings"
+        android:label="settings" >
+        <action
+            android:id="@+id/action_settings2_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/check_password"
+        android:name="com.example.mynotes.View.check_password"
+        android:label="fragment_check_password"
+        tools:layout="@layout/fragment_check_password" >
+        <action
+            android:id="@+id/action_check_password_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_check_password_to_settings2"
+            app:destination="@id/settings2" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_of_note"
+        android:name="com.example.mynotes.View.details_of_note"
+        android:label="details_of_note" >
+        <action
+            android:id="@+id/action_details_of_note_to_feedFragment2"
+            app:destination="@id/feedFragment" />
+    </fragment>
+</navigation>

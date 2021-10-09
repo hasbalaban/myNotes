@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="Notes"
+            type="com.example.mynotes.database.Notes" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/NoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:padding="10dp"
+            android:background="#CC6969"
+            android:textColor="@color/white"
+            android:text="@{Notes.noteTitle}"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            />
+
+        <Spinner
+            android:id="@+id/NoteCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#FF0000"
+            android:layout_marginBottom="6dp"
+            android:textAlignment="center"
+            android:background="#B3CD9C"
+            android:textSize="25sp"
+            />
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/text_details">
+
+
+            <EditText
+
+                android:id="@+id/NoteContext"
+                android:paddingTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="@{Notes.noteContext}"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:scrollbars="vertical"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:verticalScrollbarPosition="left"
+                android:scrollbarStyle="insideInset"
+                android:background="@null"
+                />
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

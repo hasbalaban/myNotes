@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/addScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:background="@drawable/style_for_title"
+                android:id="@+id/NoteTitle"
+                android:hint="başlık"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="3dp"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                />
+
+
+            <Spinner
+                android:id="@+id/NoteCategory"
+                android:background="@drawable/style_for_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"/>
+
+
+
+
+
+            <EditText
+                android:id="@+id/NoteContext"
+                android:hint="içerik"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:background="@drawable/style_for_context"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/succesed"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/kaydedildi"/>
+    </RelativeLayout>
+
+</layout>
+
+
